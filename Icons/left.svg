@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-iPhone_12_Pro_Max_4">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="iPhone_12_Pro_Max_4" data-name="iPhone 12 Pro Max – 4" clip-path="url(#clip-iPhone_12_Pro_Max_4)">
+    <g id="Iconly_Light_Arrow_-_Down_Circle" data-name="Iconly/Light/Arrow - Down Circle" transform="translate(2.75 21.25) rotate(-90)">
+      <g id="Arrow_-_Down_Circle" data-name="Arrow - Down Circle">
+        <path id="Stroke_1" data-name="Stroke 1" d="M0,9.25A9.25,9.25,0,1,1,9.25,18.5,9.25,9.25,0,0,1,0,9.25Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+        <path id="Stroke_3" data-name="Stroke 3" d="M0,3.486,3.471,0,6.942,3.486" transform="translate(5.779 7.206)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+      </g>
+    </g>
+  </g>
+</svg>
