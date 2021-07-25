@@ -1,0 +1,902 @@
+/* ---------------
+ Add Fonts Face
+-----------------*/
+@font-face {
+    font-family: Yekan-bakh;
+    src: url(Font/Yekan_Bakh_Regular.ttf);
+    src: url(Font/Yekan_Bakh_Regular.eot);
+    src: url(Font/Yekan_Bakh_Regular.woff);
+    src: url(Font/Yekan_Bakh_Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Yekan-bakh;
+    src: url(Font/Yekan_Bakh_Bold.ttf);
+    src: url(Font/Yekan_Bakh_Bold.eot);
+    src: url(Font/Yekan_Bakh_Bold.woff);
+    src: url(Font/Yekan_Bakh_Bold.woff2);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: iransans-fanum;
+    src: url(Font/IRANSans_faNum.ttf);
+    src: url(Font/IRANSans_fanum.eot);
+    src: url(Font/IRANSans_fanum.woff);
+    src: url(Font/IRANSans_fanum.woff2);
+}
+
+/* ---------------
+ Global Style
+-----------------*/
+body {
+    font-family: Yekan-bakh !important;
+    direction: rtl !important;
+}
+.container {
+    width: 1200px !important;
+}
+.btn-outline {
+    background-color: #ffffff;
+    color: #341F97;
+    border: 1.5px solid #341F97;
+    border-radius: 10px;
+}
+.btn-fill {
+    background-color: #341F97;
+    border: none;
+    color: #ffffff;
+    border-radius: 10px;
+}
+.btn-outline:hover {
+    background-color: #341F97;
+    color: #ffffff;
+    border: none;
+    transition: all 0.2 ease-in;
+}
+.btn-fill:hover {
+    background-color: #ffffff;
+    color: #341F97;
+    border: 1.5px solid #341F97;
+    transition: all 0.2 ease-in;
+}
+a, a:hover {
+    text-decoration: none;
+}
+/* ---------------
+ Header Stlye
+-----------------*/
+header {
+    width: 100%;
+    height: 120px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.16);
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+
+/* -------------------
+Phone Number Style
+---------------------*/
+header .phone-number {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 70px;
+    font-size: 20px;
+    color: #707070;
+}
+
+.phone-number #mobile-number {
+    font-family: iransans-fanum;
+    direction: ltr;
+    margin-right: 10px;
+    color: #341F97;
+}
+
+
+/* ---------------
+ Navigation Style
+-----------------*/
+.navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+/* ---------------
+ Logo Style
+-----------------*/
+.navigation .main-logo {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+
+/* ---------------
+ Menu Style
+-----------------*/
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 10px 10px 0 0;
+}
+
+.menu ul li {
+    margin-left: 50px;
+}
+.menu ul li a {
+    color: #707070;
+    position: relative;
+    font-size: 16px;
+}
+
+.menu ul li a.active,
+.menu ul li a:hover {
+    text-decoration: none;
+    color: #341F97;
+    transition: all 0.2 ease-in;
+}
+
+.menu ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 49.5px;
+    height: 2.5px;
+    border-radius: 10px;
+    background-color: #341F97;
+    transition: all 0.5s ease;
+    transform: scale(0);
+}
+
+.menu ul li a.active::before,
+.menu ul li a:hover::before {
+    transform: scale(1);
+}
+
+
+/* ---------------
+ Search Icon Style
+-----------------*/
+.search-shop-icon-box {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.search-icon,
+.shopping-card {
+    width: 20px;
+}
+.search-icon-box {
+    margin-right: 15px;
+}
+
+
+/* -------------------------
+ Shopping Card List Style
+--------------------------*/
+.search-box {
+    display: flex;
+    display: none
+}
+.search-box form input {
+    border: none;
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.16);
+    position: relative
+}
+.search-box form input:active {
+    border: none;
+}
+.search-box form img {
+    position: absolute;
+    top: 11px;
+    left: 25px;
+}
+
+
+/* -------------------------
+ Shopping Card List Style
+--------------------------*/
+.shopping-card {
+    position: relative;
+}
+.shopping-card-list {
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    position: absolute;
+    top: 40px;
+    right: 70px;
+    z-index: 1;
+    transition: all 0.2s ease-in;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    transform: scale(0);
+}
+.shopping-card:hover .shopping-card-list {
+    transition: all 0.2s ease-out;
+    transform: scale(1);
+}
+.shopping-card-title {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.shopping-card-list h3 {
+    font-size: 15px;
+    font-weight: 700;
+}
+.under-shopping-title {
+    border-top: 2px dashed #000;
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+/* -------------------------
+ Shopping Card List Style
+--------------------------*/
+.clear-card {
+    margin-top: 20px;
+    transform: scale(0);
+}
+.shopping-card:hover .clear-card {
+    transition: all 0.2s ease-out;
+    transform: scale(1);
+}
+.clear-card a button {
+    width: 100%;
+    height: 40px;
+}
+
+
+/* ----------------------
+ Register Button Style
+-----------------------*/
+.users-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.register-btn,
+.login-btn {
+    width: 90px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* ---------------------
+ Home Section Style
+----------------------*/
+.home-section {
+    padding: 50px 0;
+}
+
+/* ---------------------
+ Ipad Pro Slider Style
+----------------------*/
+.ipad-pro-slider {
+    width: 840px;
+    height: 480px;
+    padding: 70px 60px 0 60px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.16);
+    display: grid;
+    grid-template-columns: 385px 345px;
+    grid-template-rows: 75px 205px 84px;
+    position: relative;
+    float: right;
+}
+
+/* ---------------------
+ Ipad Pro Badge Style
+----------------------*/
+.ipad-pro-slider .badge {
+    width: 90px;
+    height: 30px;
+    background-color: #341F97;
+    color: #ffffff;
+    font-family: Yekan-bakh;
+    font-weight: 400;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+.ipad-pro-slider .badge span{
+    font-family: iransans-fanum;
+    direction: ltr;
+    margin-left: 3px;
+}
+
+
+/* ---------------------
+ Ipad Pro Titles Style
+----------------------*/
+.title {
+    font-size: 20px;
+    color: #341F97;
+    text-align: right;
+}
+
+.title h2 {
+    font-weight: 700;
+}
+
+
+/* ----------------------
+ Ipad Pro Images Style
+-----------------------*/
+.ipad-pro-image {
+    margin-top: 30px;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.ipad-pro-image img {
+    max-width: 348px;
+}
+
+
+/* ---------------------------
+ Ipad Pro Information Style
+----------------------------*/
+.ipad-pro-information {
+    margin-top: 80px;
+    grid-column-start: 1;
+}
+.information-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+.information-item:last-child {
+    margin-bottom: 0;
+}
+.information-item img {
+    width: 25px;
+    margin-left: 10px;
+}
+
+.information-item h3 {
+    font-size: 20px;
+    margin-top: 6px;
+}
+.information-item h3 span {
+    font-family: iransans-fanum;
+}
+
+
+/* ----------------------------------
+ Ipad Pro Add To Card Button Style
+-----------------------------------*/
+.ipad-pro-add-to-card {
+    display: flex;
+    align-items: flex-end;
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+.ipad-pro-add-to-card a button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    width: 170px;
+    height: 40px;
+}
+.ipad-pro-add-to-card a button img {
+    margin-left: 5px;
+    color: #fff;
+}
+
+
+/* ----------------------------------
+ Ipad Pro Price Style
+-----------------------------------*/
+.ipad-pro-price {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    position: relative;
+    margin-left: 30px;
+}
+.ipad-pro-price h3 {
+    font-family: iransans-fanum;
+    color: #27AE60;
+}
+.ipad-pro-price span {
+    position: absolute;
+    top: 20px;
+    left: -40px;
+    color: #341F97;
+    font-size: 20px;
+}
+
+
+/* ----------------------------------
+ Ipad Pro See Product Style
+-----------------------------------*/
+.ipad-pro-see-product {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+.ipad-pro-see-product a button {
+    width: 170px;
+    height: 40px;
+}
+.ipad-pro-see-product a button img {
+    margin-right: 5px;
+}
+
+
+/* --------------------------
+  Iphone 12 Slider Style
+---------------------------*/
+.iphone-12-slider {
+    width: 250px;
+    height: 480px;
+    color: #ffffff;
+    background-color: #341F97;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 70px 20px 0 20px;
+    position: relative;
+    float: left;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.16);
+}
+
+
+/* --------------------------
+  Iphone 12 Badge Style
+---------------------------*/
+.iphone-12-slider .badge {
+    width: 100px;
+    height: 30px;
+    background-color: #ffffff;
+    color: #341F97;
+    font-family: Yekan-bakh;
+    font-weight: 400;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+
+/* --------------------------
+  Iphone 12 Title Style
+---------------------------*/
+.iphone-12-slider .iphone-12-title h2 {
+    font-size: 25px;
+    text-align: center;
+}
+.iphone-12-slider .iphone-12-title p {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+
+/* --------------------------
+  Iphone 12 Image Style
+---------------------------*/
+.iphone-12-slider .iphone-12-image img {
+    width: 200px;
+}
+
+
+/* --------------------------
+  Iphone 12 See Product Style
+---------------------------*/
+.iphone-12-see-product {
+    width: 160px;
+    height: 40px;
+    display: flex;
+    margin-top: 20px;
+}
+.iphone-12-see-product img {
+    width: 24px;
+}
+
+
+/* --------------------------
+  Macbook Pro Slider Style
+---------------------------*/
+.macbook-pro-slider {
+    width: 100%;
+    height: 480px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.16);
+    padding: 70px 60px 0 50px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 360px 650px;
+    grid-template-rows: 120px 200px 60px;
+}
+
+/* --------------------------
+  Macbook Pro Title Style
+---------------------------*/
+.macbook-pro-slider .macbook-pro-title {
+    color: #341F97;
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+.macbook-pro-slider .macbook-pro-title h2 {
+    direction: ltr;
+}
+.macbook-pro-slider .macbook-pro-title p {
+    text-align: right;
+    margin-right: 5px;
+}
+
+/* --------------------------
+  Macbook Pro Images Style
+---------------------------*/
+.macbook-pro-slider .macbook-pro-image {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.macbook-pro-slider .macbook-pro-image .big-image {
+    width: 316px;
+}
+.macbook-pro-slider .macbook-pro-image .close-image {
+    width: 464px;
+    position: absolute;
+    right: -20px;
+    bottom: -115px;
+}
+.macbook-pro-slider .macbook-pro-image .thin-image {
+    object-fit: scale-down;
+    width: 300px;
+    position: absolute;
+    top: 100px;
+    right: 55px;
+}
+
+/* --------------------------
+  Macbook Pro Button Style
+---------------------------*/
+.mb-pro-add-to-card,
+.mb-pro-see-product {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.mb-pro-add-to-card button,
+.mb-pro-see-product button {
+    width: 165px;
+    height: 40px;
+}
+.mb-pro-see-product {
+    justify-content: flex-end;
+}
+
+/* ---------------------
+  Special Product Style
+----------------------*/
+.special-product {
+    width: 100%;
+    height: 610px;
+    margin-top: 100px;
+}
+.special-product .sp-title {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #341F97;
+    margin-bottom: 60px;
+}
+.sp-title h2 {
+    font-size: 50px;
+}
+.sp-title hr {
+    width: 73%;
+    background-color: #341F97;
+    height: 1.5px;
+}
+
+/* --------------------------
+  Special Product Item Style
+---------------------------*/
+.sp-item-container {
+    display: flex;
+    justify-content: space-between;
+}
+.sp-item {
+    width: 260px;
+    height: 480px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    padding: 35px 35px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.sp-item .item-title {
+    direction: ltr;
+    text-align: center;
+    color: #341F97;
+}
+.sp-item .item-title p {
+    margin-bottom: 0;
+    font-size: 20px;
+}
+.sp-item .item-img img {
+    width: 185px;
+}
+.sp-item .item-price {
+    margin-top: 15px;
+}
+.sp-item .item-price .del,
+.sp-item .item-price .now {
+    color: #C23616;
+    font-family: iransans-fanum;
+    font-size: 25px;
+    margin-bottom: 0;
+}
+.sp-item .item-price .now {
+    color: #27AE60;
+    margin-top: 0;
+}
+.sp-item .item-see-product button {
+    margin-top: 20px;
+    width: 165px;
+    height: 40px;
+}
+
+
+/* -------------------
+  New Product Banner
+--------------------*/
+.new-product-banner {
+    width: 100%;
+    height: 300px;
+    background-color: #341F97;
+    margin-top: 200px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.new-product-banner h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    direction: rtl;
+}
+.spans {
+    display: flex;
+}
+#clock {
+    direction: ltr;
+    font-family: 'iransans-fanum';
+}
+.spans span {
+    margin-right: 45px;
+}
+span.second {
+    margin: 0;
+}
+
+
+/* -------------------
+  Shop Service Style
+--------------------*/
+.shop-service {
+    width: 100%;
+    height: 610px;
+    margin-top: 100px;
+    margin-bottom: 500px;
+}
+.shop-service .ss-title {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #341F97;
+    margin-bottom: 60px;
+}
+.ss-title h2 {
+    font-size: 50px;
+}
+.ss-title hr {
+    width: 71%;
+    background-color: #341F97;
+    height: 1.5px;
+}
+
+/* -----------------------
+  Shop Service Item Style
+------------------------*/
+.ss-content-parent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.ss-content-parent .ss-text {
+    width: 520px;
+    height: 275px;
+    direction: rtl;
+}
+.ss-content-parent .ss-text p {
+    text-align: justify;
+    font-size: 25px;
+}
+.ss-servic-parent {
+    width: 470px;
+    height: 570px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ss-servic-item {
+    width: 220px;
+    height: 250px;
+    background-color: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #341F97;
+}
+.ss-servic-item:nth-child(1) {
+    background-color: #341F97;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.ss-servic-item:nth-child(2) {
+    margin-left: 0 !important;
+    margin-top: 50px;
+}
+.ss-servic-item:nth-child(3) {
+    margin-top: -30px;
+}
+.ss-servic-item:nth-child(4) {
+    margin-left: 0 !important;
+    background-color: #341F97;
+    margin-top: 20px;
+    color: #fff;
+}
+.ss-servic-item img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+.ss-servic-item h3 {
+    font-size: 25px;
+}
+.ss-servic-item span {
+    font-family: iransans-fanum;
+    font-size: 21px;
+}
+
+
+
+/* -----------------------
+  Footer Section Style
+------------------------*/
+#footer {
+    width: 100%;
+    height: 500px;
+    background-color: #341F97;
+    display: flex;
+    flex-direction: column;
+}
+#footer .footer-our-service {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    padding: 70px 0 0 0;
+}
+.f-our-service-item {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.f-our-service-item img {
+    width: 100px;
+}
+.f-our-service-item h3 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+.footer-nav-menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.footer-nav-menu img {
+    width: 100px;
+}
+.footer-nav-menu .menu ul li a {
+    color: white;
+}
+.register-to-blog {
+    align-self: flex-start;
+}
+.register-to-blog h3 {
+    color: white;
+    font-size: 20px;
+    text-align: right;
+}
+.register-to-blog #email {
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+    position: relative;
+}
+.register-to-blog #submit {
+    border-radius: 10px;
+    border: none;
+    background-color: #4834d4;
+    color: white;
+    height: 30px;
+    width: 70px;
+    position: absolute;
+    left: 160px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    
+}
